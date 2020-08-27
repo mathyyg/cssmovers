@@ -1,0 +1,517 @@
+
+@import url(http://allfont.net/allfont.css?fonts=agency-fb);
+
+*{
+	cursor: url("movercursor.png") 16 16, pointer;
+}
+.tableau{ 
+	position: relative;
+	left:0px;
+	top:128px;
+	margin-left: 0%;
+    display: grid;
+    height:100%;
+    width: 100%;
+    grid-template: repeat(16,64px)/ repeat(16,64px);
+    z-index: 3;
+}
+.tableau .case{
+    background: url('floor.png');
+    z-index:5;
+}
+
+.Regles{
+	position: relative;
+	top:-448px;
+	left:1024px;
+	width:256px;
+	height:1024px;
+	background-repeat: no-repeat;
+	background: url('Yellow.png'); /* Modifié avec bonne dimension image*/
+	border:1px solid black;
+	
+}
+#checkCamion{
+	display: none;
+}
+#checkCamion:checked ~*, #checkCamion:checked ~* ~*, #checkCamion:checked ~* ~* ~*, #checkCamion:checked ~div div .case img, #checkCamion:checked ~* ~* ~* ~* ~*{
+	cursor: url(voiture/delivery32.png) 16 16, pointer;
+} 
+#checkCamion:checked ~div div .Camion1{
+	display: none;
+}
+.tableau a{
+	font-size: 40px;
+	color:white;
+	z-index:2;
+	font-family: 'Agency FB';
+	font-weight:bold;
+	z-index: 21;
+
+}
+.Regles a{
+	font-size: 40px;
+	color:black;
+	z-index:2;
+	position: absolute;
+	top:620px;
+	left:96px;
+	text-align: center;;
+	font-family: 'Agency FB';
+	font-weight:bold;
+}
+body{
+	background-color: black;
+	z-index:10;
+	margin:0px;
+    padding: 0px;
+}
+
+#case1{
+	z-index: 20;
+}
+
+.Airedejeux{
+	position: relative;
+	top:5%;
+	width:1024px;
+	height:448px;
+	background-color: black;
+	z-index: 2;
+}
+.Pont1{
+	width:64px;
+	height:64px;
+	background: url("pont.png");
+	z-index: 8;
+	animation-duration: 10s;
+	animation-name : pontUN;
+	animation-iteration-count : 100000;
+}
+
+.Camion1{
+	position:absolute;
+	top:320px;
+	left:896px;
+	margin-left : 0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 1s;
+	animation-name : camionUN;
+	animation-iteration-count : 100000;
+}
+
+.Fail .ContentF{
+	display: block;
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	background-repeat: no-repeat; 
+	background: url('FAIL.png'); /* Modifié avec bonne dimension image*/
+	z-index:1;
+}
+.Fail:hover{
+	display: block;
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	background-repeat: no-repeat; 
+	background: url('FAIL.png');
+	z-index:10;
+}
+
+.FAILVEC:hover{
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	animation-duration: 0s;
+	animation-name : noneAn;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+	background: url('FAIL.png');
+	z-index:10;
+}
+/* MODIFIE JUSQU'A*/
+/*.Win .ContentW{
+	display: block;
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+/*	background: url('WIN.png');
+	z-index:100;
+}*/
+
+
+
+/*.Win:hover{
+	display: block;
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+/*	background: url('WIN.png');
+	z-index:100;
+}*/
+.ContentW{
+	display: block;
+	position: absolute;
+	z-index:15;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	text-align: center;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+	background: url('WIN.png');
+	z-index: 21;
+}
+#checkWin{
+display: none;	
+}
+.Win {
+	display: none;
+}
+
+.ContentW{
+	display: none;
+}
+
+#checkCamion:checked ~div div .Win{
+	display: initial;
+}
+
+#checkWin:checked ~div .ContentW{
+	display: initial;
+}
+/*ICI*/
+
+.Voiturerouge1{
+	width:64px;
+	height:64px;
+	background: url("voiture/voiturerouge.png");
+	z-index: 8;
+	animation-duration: 15s;
+	animation-name : voitureUN;
+	animation-iteration-count : 100000;
+}
+
+.Voitureverte1{
+	width:64px;
+	height:64px;
+	background: url("voiture/voitureverte.png");
+	z-index: 8;
+	animation-duration: 8s;
+	animation-name : voitureDEUX;
+	animation-iteration-count : 100000;
+}
+
+.Voitureorange1{
+	width:64px;
+	height:64px;
+	background: url("voiture/voitureorange.png");
+	z-index: 8;
+	animation-duration: 4s;
+	animation-name : voitureTROIS;
+	animation-iteration-count : 100000;
+}
+
+.Voitureviolette1{
+	width:64px;
+	height:64px;
+	background: url("voiture/voitureviolette.png");
+	z-index: 8;
+	animation-duration: 6s;
+	animation-name : voitureQUATRE;
+	animation-iteration-count : 100000;
+}
+
+.Voiturebleue1{
+	width:64px;
+	height:64px;
+	background: url("voiture/voiturebleue.png");
+	z-index: 8;
+	animation-duration: 3s;
+	animation-name : voitureCINQ;
+	animation-iteration-count : 100000;
+}
+
+
+
+@keyframes camionUN{
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1
+	}
+}
+
+
+@keyframes pontUN{
+	0%{
+		position:absolute;
+		top:320px;
+		left:638px;
+		width : 64px;
+	}
+
+	50%{
+		position:absolute;
+		top:320px;
+		left:832px;
+		width: 64px;
+	}
+
+	100%{
+		position:absolute;
+		top:320px;
+		left:638px;
+		width : 64px;
+	}
+}
+
+@keyframes voitureUN{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:128px;
+		left:956px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:128px;
+		width:64px;
+		left:0px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:128px;
+		width:64;
+		left:0px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:128px;
+		width:64;
+		left:956px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:128px;
+		left:956px;
+		width : 64px;
+	}
+}
+
+@keyframes voitureDEUX{
+		0%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:192px;
+			left:956px;
+			width : 64px;
+		}
+
+		49%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:192px;
+			width:64px;
+			left:0px;
+		}
+
+		50%{
+			position:absolute;
+			transform : rotateX(180deg);
+			transform : rotateY(180deg);
+			top:192px;
+			width:64;
+			left:0px;
+		}
+
+		99%{
+			position:absolute;
+			transform : rotateX(180deg);
+			transform : rotateY(180deg);
+			top:192px;
+			width:64;
+			left:956px;
+		}
+		100%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:192px;
+			left:956px;
+			width : 64px;
+	}
+}
+
+	
+@keyframes voitureTROIS{
+		0%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:448px;
+			left:956px;
+			width : 64px;
+		}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:448px;
+		width:64px;
+		left:0px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:448px;
+		width:64;
+		left:0px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:448px;
+		width:64;
+		left:956px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:448px;
+		left:956px;
+		width : 64px;
+	}
+}
+
+
+@keyframes voitureQUATRE{
+		0%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:512px;
+			left:956px;
+			width : 64px;
+		}
+
+		49%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:512px;
+			width:64px;
+			left:0px;
+		}
+
+		50%{
+			position:absolute;
+			transform : rotateX(180deg);
+			transform : rotateY(180deg);
+			top:512px;
+			width:64;
+			left:0px;
+		}
+
+		99%{
+			position:absolute;
+			transform : rotateX(180deg);
+			transform : rotateY(180deg);
+			top:512px;
+			width:64;
+			left:956px;
+		}
+		100%{
+			position:absolute;
+			transform : rotateX(0deg);
+			transform : rotateY(0deg);
+			top:512px;
+			left:956px;
+			width : 64px;
+	}
+}
+
+@keyframes voitureCINQ{
+		0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		left:956px;
+		width : 64px;
+		}
+
+		49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		width:64px;
+		left:0px;
+		}
+
+		50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:576px;
+		width:64;
+		left:0px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:576px;
+		width:64;
+		left:956px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		left:956px;
+		width : 64px;
+	}
+}
+

@@ -1,0 +1,199 @@
+@import url(http://allfont.net/allfont.css?fonts=agency-fb);
+
+body {
+  background:#a6a6a6;
+  
+}
+a {
+  text-decoration:none;
+  color:black;
+}
+a:hover {
+  color:white;
+}
+a:visited {
+  color:black;
+}
+
+a:visited:hover {
+  color:white;
+}
+
+#tout {
+  width:0px;
+  height:0px;
+  
+  border-left: 300px solid transparent;
+  border-right:300px solid transparent;
+  border-top: 300px solid transparent;
+  border-radius: px;
+  position:relative;
+  margin:auto;
+  top:5px;
+  left:2px;
+  
+}
+
+#titre {
+  
+  position:relative;
+  bottom:330px;
+  right:300px;
+  height:50px;
+  width:600px;
+  background:white;
+  text-align:center;
+  font-size:30px;
+ background-size: 1px 300%;
+ -webkit-transition:0.5s;
+  transition:0.5s;
+  color:black;
+  font-weight:bold;
+  font-family:'Agency FB';
+  
+  cursor:pointer;
+  
+}
+
+#titre:hover {
+  background:#ffcc00;
+  color:white;
+-webkit-transform:rotate(-1deg);
+  transform:rotate(-2deg);
+  
+  
+}
+
+#niveau1:hover {
+  background:#ffcc00;
+  color:white;
+   
+  -webkit-transform:rotate(2deg);
+  transform:rotate(2deg);
+}
+
+#niveau3:hover {
+  background:#ffcc00;
+  color:white;
+  -webkit-transform:rotate(2deg);
+  transform:rotate(2deg);
+  
+}
+
+#niveau2:hover {
+  background:#ffcc00;
+  color:white;
+  -webkit-transform:rotate(-2deg);
+  transform:rotate(-2deg);
+  
+}
+
+#left {
+  height:100px;
+    width:600px;
+  background:#ffcc00;
+  position:absolute;
+  z-index:6;
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+  top:-175px;
+  right:-104px;
+  border-top:1px solid white;
+  
+}
+#right {
+  height:100px;
+  width:600px;
+  background:#ffcc00;
+  position:absolute;
+  top:-229px;
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  z-index:7;
+  left:-56px;
+  border-top:1px solid white;
+ 
+}
+
+#titre p {
+  position:relative;
+  top:2px;
+  right:4px;
+  
+}
+
+#niveau1 {
+  height:50px;
+  width:500px;
+  background:white;
+  position:relative;
+  bottom:345px;
+  right:240px;
+  text-align:center;
+  font-size:30px;
+  font-family:'Agency FB';
+  color:black;
+  font-weight:bold;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+   
+  
+}
+#niveau1 p {
+  position:relative;
+  top:0px;
+  right:9px;
+  
+}
+
+#niveau2 {
+  
+  height:50px;
+  width:400px;
+  background:white;
+  position:relative;
+  bottom:360px;
+  right:200px;
+  font-size:30px;
+  text-align:center;
+  font-family:'Agency FB';
+  color:black;
+  font-weight:bold;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#niveau2 p {
+  position:relative;
+  top:0px;
+  right:4px;
+  
+}
+
+#niveau3 {
+  height:50px;
+  width:300px;
+  position:relative;
+  background:white;
+  bottom:375px;
+  font-size:30px;
+  right:150px;
+  text-align:center;
+  font-family:'Agency FB';
+  color:black;
+  font-weight:bold;
+   -webkit-transition:0.5s;
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+#niveau3 p {
+  position:relative;
+  top:0px;
+  
+}

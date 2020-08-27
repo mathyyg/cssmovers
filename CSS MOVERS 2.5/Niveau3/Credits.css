@@ -1,0 +1,519 @@
+@import url(http://allfont.net/allfont.css?fonts=agency-fb);
+
+*{
+	margin:0;
+	padding:0;
+	cursor:url("voiture/delivery32.png") 16 16, pointer;
+}
+
+body{
+	background-color: #FFC000;
+	z-index:1;
+}
+.tableau{ 
+	margin-left:384px;
+	margin-top:192px;
+    display: grid;
+    height:100%;
+    width: 100%;
+    grid-template: repeat(10,64px)/ repeat(8,64px);
+    z-index: 3;
+}
+
+.tableau .case{
+    background: url('../Niveau1/floor.png');
+    z-index:5;
+}
+
+#DEPARTSUR{
+	position: absolute;
+	top:192px;
+	left:384px;
+	z-index:11;
+}
+
+
+.Win:hover{
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	animation-duration: 0s;
+	animation-name : noneAn;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+	background: url('WIN.png');
+	z-index:12;
+
+}
+a{
+	position: absolute;
+	top:64px;
+	left: 576px;
+	font-size: 40px;
+	color:white;
+	z-index:15;
+	font-family: 'Agency FB';
+	font-weight:bold;
+}
+
+
+.Camion1{
+	display:block;
+	position:absolute;
+	top:256px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 2s;
+	animation-name : camionUN;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion2{
+	display:block;
+	position:absolute;
+	top:320px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 3s;
+	animation-name : camionDEUX;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion3{
+	display:block;
+	position:absolute;
+	top:384px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 4s;
+	animation-name : camionTROIS;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion4{
+	display:block;
+	position:absolute;
+	top:448px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 2s;
+	animation-name : camionQUATRE;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion5{
+	display:block;
+	position:absolute;
+	top:576px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 4s;
+	animation-name : camionCINQ;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion6{
+	display:block;
+	position:absolute;
+	top:640px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 2s;
+	animation-name : camionSIX;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Camion7{
+	display:block;
+	position:absolute;
+	top:704px;
+	left:384px;
+	margin-left:0%;
+	width : 64px;
+	height : 64px;
+	background: url("voiture/deliverytruck.png");
+	z-index:8;
+	animation-duration: 3s;
+	animation-name : camionSEPT;
+	animation-iteration-count : 100000;
+	z-index: 7;
+}
+
+.Fail:hover{
+	display: block;
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	background-repeat: no-repeat; 
+	background: url('FAIL.png');
+	z-index:10;
+}
+
+.FAILVEC:hover{
+	position: absolute;
+	top:-128px;
+	left:-64px;
+	width:1344px;
+	height:1152px;
+	animation-duration: 0s;
+	animation-name : noneAn;
+	background-repeat: no-repeat; /* A MODIFIER PAR 1280 et 1024*/
+	background: url('FAIL.png');
+	z-index:10;
+}
+
+
+@keyframes camionUN{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:256px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:256px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:256px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:256px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:256px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionDEUX{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:320px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:320px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:320px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:320px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:320px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionTROIS{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:384px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:384px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:384px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:384px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:384px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionQUATRE{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:448px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:448px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:448px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:448px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:448px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionCINQ{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:576px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:576px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:576px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionSIX{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:640px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:640px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:640px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:640px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:640px;
+		left:384px;
+		width : 64px;
+	}
+}
+
+@keyframes camionSEPT{
+	0%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:704px;
+		left:384px;
+		width : 64px;
+	}
+
+	49%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:704px;
+		width:64px;
+		left:832px;
+	}
+
+	50%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:704px;
+		width:64px;
+		left:832px;
+	}
+
+	99%{
+		position:absolute;
+		transform : rotateX(180deg);
+		transform : rotateY(180deg);
+		top:704px;
+		width:64px;
+		left:384px;
+	}
+	100%{
+		position:absolute;
+		transform : rotateX(0deg);
+		transform : rotateY(0deg);
+		top:704px;
+		left:384px;
+		width : 64px;
+	}
+}

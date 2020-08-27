@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Niveau 2</title>
+  <link rel="stylesheet" href="deplacement.css">  
+   <link rel="icon" href="test_icon.png" />
+</head>
+<body>
+  <div id="header">
+   CSS MOVERS Niveau 2
+  </div>
+ <div id="page">
+        <div id="elem_selection">
+          <p>
+            Veuillez placer ce meuble dans le camion :
+          </p>
+        </div>
+        <div id="vide"></div>
+        <input type="checkbox" id="canap" name="canap">
+        <input type="checkbox" id="zonecanap01" name="zonecanap01">
+        <input type="checkbox" id="zonecanap02" name="zonecanap02">
+        <input type="checkbox" id="zonecanap03" name="zonecanap03">
+        <input type="checkbox" id="zonecanap05" name="zonecanap05">
+        <input type="checkbox" id="zonecanap06" name="zonecanap06">
+        <input type="checkbox" id="zonecanap07" name="zonecanap07">
+        <input type="checkbox" id="zonecanap09" name="zonecanap09">
+        <input type="checkbox" id="zonecanap10" name="zonecanap10">
+        <input type="checkbox" id="zonecanap11" name="zonecanap11">
+        <label  for="canap" id="lbcanap"><img src="canap.png" alt=""></label>
+
+        <input type="checkbox" id="tv" name="tv" value="tv">
+        <input type="checkbox" id="zonetv01" name="zonetv01">
+        <input type="checkbox" id="zonetv02" name="zonetv02">
+        <input type="checkbox" id="zonetv03" name="zonetv03">
+        <input type="checkbox" id="zonetv05" name="zonetv05">
+        <input type="checkbox" id="zonetv06" name="zonetv06">
+        <input type="checkbox" id="zonetv07" name="zonetv07">
+        <input type="checkbox" id="zonetv09" name="zonetv09">
+        <input type="checkbox" id="zonetv10" name="zonetv10">
+        <input type="checkbox" id="zonetv11" name="zonetv11">
+        <input type="checkbox" id="zonetv13" name="zonetv13">
+        <input type="checkbox" id="zonetv14" name="zonetv14">
+        <input type="checkbox" id="zonetv15" name="zonetv15">
+        <label  for="tv" id="lbtv"><img src="tv.png" alt=""></label>
+    
+        <input type="checkbox" id="bocale" name="bocale" value="bocale">
+        <input type="checkbox" id="zonebocale01" name="zonebocale01">
+        <input type="checkbox" id="zonebocale02" name="zonebocale02">
+        <input type="checkbox" id="zonebocale03" name="zonebocale03">
+        <input type="checkbox" id="zonebocale04" name="zonebocale04">
+        <input type="checkbox" id="zonebocale05" name="zonebocale05">
+        <input type="checkbox" id="zonebocale06" name="zonebocale06">
+        <input type="checkbox" id="zonebocale07" name="zonebocale07">
+        <input type="checkbox" id="zonebocale08" name="zonebocale08">
+        <input type="checkbox" id="zonebocale09" name="zonebocale09">
+        <input type="checkbox" id="zonebocale10" name="zonebocale10">
+        <input type="checkbox" id="zonebocale11" name="zonebocale11">
+        <input type="checkbox" id="zonebocale12" name="zonebocale12">
+        <input type="checkbox" id="zonebocale13" name="zonebocale13">
+        <input type="checkbox" id="zonebocale14" name="zonebocale14">
+        <input type="checkbox" id="zonebocale15" name="zonebocale15">
+        <input type="checkbox" id="zonebocale16" name="zonebocale16">
+        <label  for="bocale" id="lbbocale"><img src="bocale.png" alt=""></label>
+
+        <input type="checkbox" id="table" name="table" value="table">
+        <input type="checkbox" id="zonetable01" name="zonetable01">
+        <input type="checkbox" id="zonetable02" name="zonetable02">
+        <input type="checkbox" id="zonetable05" name="zonetable05">
+        <input type="checkbox" id="zonetable06" name="zonetable06">
+        <input type="checkbox" id="zonetable09" name="zonetable09">
+        <input type="checkbox" id="zonetable10" name="zonetable10">
+        <label for="table" id="lbtable"><img src="tableenseble.png" alt=""></label>
+
+        <input type="checkbox" id="buffet" name="buffet" value="buffet">
+        <input type="checkbox" id="zonebuffet01" name="zonebuffet01">
+        <input type="checkbox" id="zonebuffet02" name="zonebuffet02">
+        <input type="checkbox" id="zonebuffet03" name="zonebuffet03">
+        <input type="checkbox" id="zonebuffet05" name="zonebuffet05">
+        <input type="checkbox" id="zonebuffet06" name="zonebuffet06">
+        <input type="checkbox" id="zonebuffet07" name="zonebuffet07">
+        <label for="buffet" id="lbbuffet"><img src="buffetmax.png" alt=""></label>
+
+        <input type="checkbox" id="zonecase01" name="zonecase01">
+        <input type="checkbox" id="zonecase02" name="zonecase02">
+        <input type="checkbox" id="zonecase03" name="zonecase03">
+        <input type="checkbox" id="zonecase04" name="zonecase04">
+        <input type="checkbox" id="zonecase05" name="zonecase05">
+        <input type="checkbox" id="zonecase06" name="zonecase06">
+        <input type="checkbox" id="zonecase07" name="zonecase07">
+        <input type="checkbox" id="zonecase08" name="zonecase08">
+        <input type="checkbox" id="zonecase09" name="zonecase09">
+        <input type="checkbox" id="zonecase10" name="zonecase10">
+        <input type="checkbox" id="zonecase11" name="zonecase11">
+        <input type="checkbox" id="zonecase12" name="zonecase12">
+        <input type="checkbox" id="zonecase13" name="zonecase13">
+        <input type="checkbox" id="zonecase14" name="zonecase14">
+        <input type="checkbox" id="zonecase15" name="zonecase15">
+        <input type="checkbox" id="zonecase16" name="zonecase16">
+
+<div id="rules">
+<p>
+  Règles du Jeu :
+</p>
+<p>
+  Vous devez ranger les meubles que vous venez de récupérer dans le camion.  <br>  <br> Pour prendre un meuble quand celui-ci apparaît cliquez dessus. <br> <br> Pour le poser, cliquez sur la zone où vous voulez le poser. <br> <br> Si vous n'êtes pas satisfait de votre placement cliquez sur Retour.
+</p>
+</div>
+
+  <div class="tableau">
+    <div class="case" id="case1">
+      <label for="zonecase01" id="lbzonecase01"><img src="blind.png" alt=""></label>
+      <label for="zonecanap01" id="lbzonecanap01"><img src="blind.png" alt=""></label>
+      <label for="zonetv01" id="lbzonetv01"><img src="blind.png" alt=""></label>
+      <label for="zonebocale01" id="lbzonebocale01"><img src="blind.png" alt=""></label>
+      <label for="zonetable01" id="lbzonetable01"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet01" id="lbzonebuffet01"><img src="blind.png" alt=""></label>
+      
+    </div>
+    <div class="case" id="case2">
+      <label for="zonecase02" id="lbzonecase02"><img src="blind.png" alt=""></label>
+      <label for="zonecanap02" id="lbzonecanap02"><img src="blind.png" alt=""></label>
+      <label for="zonetv02" id="lbzonetv02"><img src="blind.png" alt=""></label>
+      <label for="zonebocale02" id="lbzonebocale02"><img src="blind.png" alt=""></label>
+      <label for="zonetable02" id="lbzonetable02"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet02" id="lbzonebuffet02"><img src="blind.png" alt=""></label>
+
+    </div>
+    <div class="case" id="case3">
+      <label for="zonecase03" id="lbzonecase03"><img src="blind.png" alt=""></label>
+      <label for="zonecanap03" id="lbzonecanap03"><img src="blind.png" alt=""></label>
+      <label for="zonetv03" id="lbzonetv03"><img src="blind.png" alt=""></label>
+      <label for="zonebocale03" id="lbzonebocale03"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet03" id="lbzonebuffet03"><img src="blind.png" alt=""></label>
+
+    </div>
+    <div class="case" id="case4">
+      <label for="zonecase04" id="lbzonecase04"><img src="blind.png" alt=""></label>
+      <label for="zonebocale04" id="lbzonebocale04"><img src="blind.png" alt=""></label>
+    </div>
+    <div class="case" id="case5">
+      <label for="zonecase05" id="lbzonecase05"><img src="blind.png" alt=""></label>
+      <label for="zonecanap05" id="lbzonecanap05"><img src="blind.png" alt=""></label>
+      <label for="zonetv05" id="lbzonetv05"><img src="blind.png" alt=""></label>
+      <label for="zonebocale05" id="lbzonebocale05"><img src="blind.png" alt=""></label>
+      <label for="zonetable05" id="lbzonetable05"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet05" id="lbzonebuffet05"><img src="blind.png" alt=""></label>
+      
+    </div>
+    <div class="case" id="case6">
+      <label for="zonecase06" id="lbzonecase06"><img src="blind.png" alt=""></label>
+      <label for="zonecanap06" id="lbzonecanap06"><img src="blind.png" alt=""></label>
+      <label for="zonetv06" id="lbzonetv06"><img src="blind.png" alt=""></label>
+      <label for="zonebocale06" id="lbzonebocale06"><img src="blind.png" alt=""></label>
+      <label for="zonetable06" id="lbzonetable06"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet06" id="lbzonebuffet06"><img src="blind.png" alt=""></label>
+      
+    </div>
+    <div class="case" id="case7">
+      <label for="zonecase07" id="lbzonecase07"><img src="blind.png" alt=""></label>
+      <label for="zonecanap07" id="lbzonecanap07"><img src="blind.png" alt=""></label>
+      <label for="zonetv07" id="lbzonetv07"><img src="blind.png" alt=""></label>
+      <label for="zonebocale07" id="lbzonebocale07"><img src="blind.png" alt=""></label>
+      <label for="zonebuffet07" id="lbzonebuffet07"><img src="blind.png" alt=""></label>
+      
+
+    </div>
+    <div class="case" id="case8">
+      <label for="zonecase08" id="lbzonecase08"><img src="blind.png" alt=""></label>
+      <label for="zonebocale08" id="lbzonebocale08"><img src="blind.png" alt=""></label>
+    </div>
+    <div class="case" id="case9">
+      <label for="zonecase09" id="lbzonecase09"><img src="blind.png" alt=""></label>
+      <label for="zonecanap09" id="lbzonecanap09"><img src="blind.png" alt=""></label>  
+      <label for="zonetv09" id="lbzonetv09"><img src="blind.png" alt=""></label>
+      <label for="zonebocale09" id="lbzonebocale09"><img src="blind.png" alt=""></label>
+      <label for="zonetable09" id="lbzonetable09"><img src="blind.png" alt=""></label>
+    </div>
+   <div class="case" id="case10">
+    <label for="zonecase10" id="lbzonecase10"><img src="blind.png" alt=""></label>
+    <label for="zonecanap10" id="lbzonecanap10"><img src="blind.png" alt=""></label>
+    <label for="zonetv10" id="lbzonetv10"><img src="blind.png" alt=""></label>
+    <label for="zonebocale10" id="lbzonebocale10"><img src="blind.png" alt=""></label>
+    <label for="zonetable10" id="lbzonetable10"><img src="blind.png" alt=""></label>
+  </div>
+    <div class="case" id="case11">
+      <label for="zonecase11" id="lbzonecase11"><img src="blind.png" alt=""></label>
+      <label for="zonecanap11" id="lbzonecanap11"><img src="blind.png" alt=""></label>  
+      <label for="zonetv11" id="lbzonetv11"><img src="blind.png" alt=""></label>
+      <label for="zonebocale11" id="lbzonebocale11"><img src="blind.png" alt=""></label>
+    </div>
+     <div class="case" id="case12">
+      <label for="zonecase12" id="lbzonecase12"><img src="blind.png" alt=""></label>
+      <label for="zonebocale12" id="lbzonebocale12"><img src="blind.png" alt=""></label>
+    </div>
+     <div class="case" id="case13">
+      <label for="zonecase13" id="lbzonecase13"><img src="blind.png" alt=""></label>
+      <label for="zonetv13" id="lbzonetv13"><img src="blind.png" alt=""></label>
+      <label for="zonebocale13" id="lbzonebocale13"><img src="blind.png" alt=""></label>
+    </div>
+     <div class="case" id="case14">
+      <label for="zonecase14" id="lbzonecase14"><img src="blind.png" alt=""></label>
+      <label for="zonetv14" id="lbzonetv14"><img src="blind.png" alt=""></label>
+      <label for="zonebocale14" id="lbzonebocale14"><img src="blind.png" alt=""></label>
+    </div>
+     <div class="case" id="case15">
+      <label for="zonecase15" id="lbzonecase15"><img src="blind.png" alt=""></label>
+      <label for="zonetv15" id="lbzonetv15"><img src="blind.png" alt=""></label>
+      <label for="zonebocale15" id="lbzonebocale15"><img src="blind.png" alt=""></label>
+    </div>
+      <div class="case" id="case16">
+        <label for="zonecase16" id="lbzonecase16"><img src="blind.png" alt=""></label>
+      <label for="zonebocale16" id="lbzonebocale16"><img src="blind.png" alt=""></label>
+      </div>
+  </div>
+  
+  <div id="back">
+  <label for="tv" id="lbbacktv"><img src="blind_back.png" alt=""></label>
+  <label for="bocale" id="lbbackbocale"><img src="blind_back.png" alt=""></label>
+  <label for="table" id="lbbacktable"><img src="blind_back.png" alt=""></label>
+  <label for="buffet" id="lbbackbuffet"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap01" id="lbbackzonecanap01"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap02" id="lbbackzonecanap02"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap03" id="lbbackzonecanap03"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap05" id="lbbackzonecanap05"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap06" id="lbbackzonecanap06"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap07" id="lbbackzonecanap07"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap09" id="lbbackzonecanap09"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap10" id="lbbackzonecanap10"><img src="blind_back.png" alt=""></label>
+  <label for="zonecanap11" id="lbbackzonecanap11"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv01" id="lbbackzonetv01"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv02" id="lbbackzonetv02"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv03" id="lbbackzonetv03"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv05" id="lbbackzonetv05"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv06" id="lbbackzonetv06"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv07" id="lbbackzonetv07"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv09" id="lbbackzonetv09"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv10" id="lbbackzonetv10"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv11" id="lbbackzonetv11"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv13" id="lbbackzonetv13"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv14" id="lbbackzonetv14"><img src="blind_back.png" alt=""></label>
+  <label for="zonetv15" id="lbbackzonetv15"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale01" id="lbbackzonebocale01"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale02" id="lbbackzonebocale02"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale03" id="lbbackzonebocale03"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale04" id="lbbackzonebocale04"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale05" id="lbbackzonebocale05"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale06" id="lbbackzonebocale06"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale07" id="lbbackzonebocale07"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale08" id="lbbackzonebocale08"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale09" id="lbbackzonebocale09"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale10" id="lbbackzonebocale10"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale11" id="lbbackzonebocale11"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale12" id="lbbackzonebocale12"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale13" id="lbbackzonebocale13"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale14" id="lbbackzonebocale14"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale15" id="lbbackzonebocale15"><img src="blind_back.png" alt=""></label>
+  <label for="zonebocale16" id="lbbackzonebocale16"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable01" id="lbbackzonetable01"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable02" id="lbbackzonetable02"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable05" id="lbbackzonetable05"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable06" id="lbbackzonetable06"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable09" id="lbbackzonetable09"><img src="blind_back.png" alt=""></label>
+  <label for="zonetable10" id="lbbackzonetable10"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet01" id="lbbackzonebuffet01"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet02" id="lbbackzonebuffet02"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet03" id="lbbackzonebuffet03"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet05" id="lbbackzonebuffet05"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet06" id="lbbackzonebuffet06"><img src="blind_back.png" alt=""></label>
+  <label for="zonebuffet07" id="lbbackzonebuffet07"><img src="blind_back.png" alt=""></label>
+  </div>
+  <div id="Menu"><a href="../menu.html" alt="">Menu Principal</a></div>
+  <div id="endgame">Félicitations, la livraison peut commencer <br> <br> <br><a href="../Niveau3/Credits.html">Niveau Suivant</a> <br><br> <a href="../Niveau1/Niveau1.html">Niveau Précédent</a></div>
+
+</div>
+
+</body>
+</html>

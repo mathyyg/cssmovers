@@ -1,0 +1,1026 @@
+body{
+    background-color: #a6a6a6;
+}
+#header{
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    font-size: 30px;
+    color:black;
+    font-weight: bold;
+    font-family: 'Agency FB';
+}
+#page{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-template-areas: "selection vide rules"
+                         ". . rules"
+                         " tableau tableau endgame"
+                         " back . menu";
+    background-color: #ffcc00;
+}
+#endgame{
+    grid-area: endgame;
+    display: none;
+}
+
+#page > .tableau{ 
+    grid-area: tableau;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    display: grid;
+    width: 256px;
+    height: 256px;
+    grid-template: repeat(4,64px)/ repeat(4,64px);
+    
+}
+#vide{
+    grid-area: vide;
+}
+#rules{
+    grid-area: rules;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    background-color: #a6a6a6;
+    font-weight: bold;
+    font-family: 'Agency FB';    
+}
+
+label[id^="lbzonecase"]{
+    display: none;
+}
+
+.tableau .case{
+    background: url('floor.png');
+}
+#back {
+    grid-area: back;
+    background: url('retour.png');
+    width: 128px;
+    height: 64px;
+}
+
+label[id^="lbzonetv"], [id^="lbzonebocale"],[id^="lbzonetable"],[id^="lbzonebuffet"]{
+    display: none;
+}
+
+
+label[id^="lbcanap"], [id^="lbtv"], [id^="lbbocale"],[id^="lbtable"],[id^="lbbuffet"]{
+    display: inline-block;
+    width: 256px;
+    height: 256px;
+    margin-left: 10%;
+
+}
+label[id^="lbcanap"] img, [id^="lbtv"] img, [id^="lbbocale"] img,[id^="lbtable"] img,[id^="lbbuffet"] img{
+display: block;
+margin-left: 20%;
+margin-right: 20%;
+margin-top: 10%;
+}
+label[id^="lbtv"], [id^="lbbocale"],[id^="lbtable"],[id^="lbbuffet"]{
+    display: none;
+}
+
+input[id^="canap"], [id^="tv"], [id^="bocale"],[id^="table"],[id^="buffet"]{
+    display: none;
+}
+#elem_selection{
+    grid-area: selection;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    font-weight: bold;
+    font-family: 'Agency FB';
+}
+#back{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+input[id^="zone"]{
+    display: none;
+}
+
+label[id^="lbback"]{
+    display: none;
+    position: absolute;
+}
+
+#Menu{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 25px;
+    color:black;
+    font-weight: bold;
+    font-family: 'Agency FB';
+    grid-area: menu;
+}
+/*Placement canap ligne 1*/
+/*Previsualisation*/
+#canap:checked ~#zonecanap01:hover ~div #case1{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap01:hover ~div #case2{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap01:hover ~div #case6{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap01:checked ~div #case1{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap01:checked ~div div label[id$="01"]{display: none !important;}
+#canap:checked ~#zonecanap01:checked ~div #case2{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap01:checked ~div div label[id$="02"]{display: none !important;}
+#canap:checked ~#zonecanap01:checked ~div #case6{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap01:checked ~div div label[id$="06"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap01:checked ~div div #lbzonetv05{display: none !important;}
+#canap:checked ~#zonecanap01:checked ~div div #lbzonetable05{display: none !important;}
+#canap:checked ~#zonecanap01:checked ~div div #lbzonebuffet05{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap01:checked ~div #lbbackzonecanap01{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap02:hover ~div #case2{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap02:hover ~div #case3{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap02:hover ~div #case7{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap02:checked ~div #case2{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap02:checked ~div div label[id$="02"]{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div #case3{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap02:checked ~div div label[id$="03"]{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div #case7{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap02:checked ~div div label[id$="07"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap02:checked ~div div #lbzonetv01{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div div #lbzonetable01{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div div #lbzonetable05{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div div #lbzonetable06{display: none !important;}
+#canap:checked ~#zonecanap02:checked ~div div #lbzonebuffet01{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap02:checked ~div #lbbackzonecanap02{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap03:hover ~div #case3{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap03:hover ~div #case4{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap03:hover ~div #case8{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap03:checked ~div #case3{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap03:checked ~div div label[id$="03"]{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div #case4{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap03:checked ~div div label[id$="04"]{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div #case8{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap03:checked ~div div label[id$="08"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap03:checked ~div div #lbzonetv02{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div div #lbzonetable02{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div div #lbzonetable06{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div div #lbzonebuffet02{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div div #lbzonetv07{display: none !important;}
+#canap:checked ~#zonecanap03:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap03:checked ~div #lbbackzonecanap03{display: initial;}
+
+/*Placement canap ligne 2*/
+/*Previsualisation*/
+#canap:checked ~#zonecanap05:hover ~div #case5{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap05:hover ~div #case6{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap05:hover ~div #case10{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap05:checked ~div #case5{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap05:checked ~div div label[id$="05"]{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div #case6{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap05:checked ~div div label[id$="06"]{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div #case10{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap05:checked ~div div label[id$="10"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap05:checked ~div div #lbzonetable01{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div div #lbzonetable02{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div div #lbzonetable09{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div div #lbzonetv09{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div div #lbzonebuffet01{display: none !important;}
+#canap:checked ~#zonecanap05:checked ~div div #lbzonebuffet02{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap05:checked ~div #lbbackzonecanap05{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap06:hover ~div #case6{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap06:hover ~div #case7{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap06:hover ~div #case11{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap06:checked ~div #case6{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap06:checked ~div div label[id$="06"]{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div #case7{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap06:checked ~div div label[id$="07"]{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div #case11{background:url("canap_bas_droit.png");}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap06:checked ~div div label[id$="11"]{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div #lbzonebuffet02{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div #lbzonebuffet03{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div #lbzonebuffet05{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div #lbzonetv05{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div #lbzonetv10{display: none !important;}
+#canap:checked ~#zonecanap06:checked ~div div label[id^=lbzonetable]{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap06:checked ~div #lbbackzonecanap06{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap07:hover ~div #case7{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap07:hover ~div #case8{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap07:hover ~div #case12{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap07:checked ~div #case7{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap07:checked ~div div label[id$="07"]{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div #case8{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap07:checked ~div div label[id$="08"]{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div #case12{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap07:checked ~div div label[id$="12"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap07:checked ~div div #lbzonetv06{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div div #lbzonetv11{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div div #lbzonebuffet03{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div div #lbzonebuffet06{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div div #lbzonebuffet03{display: none !important;}
+#canap:checked ~#zonecanap07:checked ~div div label[id^=lbzonetable]{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap07:checked ~div #lbbackzonecanap07{display: initial;}
+
+/*Placement canap ligne 3*/
+/*Previsualisation*/
+#canap:checked ~#zonecanap09:hover ~div #case9{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap09:hover ~div #case10{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap09:hover ~div #case14{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap09:checked ~div #case9{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap09:checked ~div div label[id$="09"]{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div #case10{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap09:checked ~div div label[id$="10"]{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div #case14{background:url("canap_bas_droit.png");}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap09:checked ~div div label[id$="14"]{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonebuffet01{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonebuffet02{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonebuffet05{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonebuffet06{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonetv13{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonetable05{display: none !important;}
+#canap:checked ~#zonecanap09:checked ~div div #lbzonetable06{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap09:checked ~div #lbbackzonecanap09{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap10:hover ~div #case10{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap10:hover ~div #case11{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap10:hover ~div #case15{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap10:checked ~div #case10{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap10:checked ~div div label[id$="10"]{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div #case11{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap10:checked ~div div label[id$="11"]{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div #case15{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap10:checked ~div div label[id$="15"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap10:checked ~div div #lbzonetable05{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonetable06{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonetable09{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonetv09{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonebuffet02{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonebuffet03{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonebuffet06{display: none !important;}
+#canap:checked ~#zonecanap10:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap10:checked ~div #lbbackzonecanap10{display: initial;}
+
+/*Previsualisation*/
+#canap:checked ~#zonecanap11:hover ~div #case11{background:url("canap_haut_gauche.png"); opacity: 50%;}
+#canap:checked ~#zonecanap11:hover ~div #case12{background:url("canap_haut_droit.png"); opacity: 50%;}
+#canap:checked ~#zonecanap11:hover ~div #case16{background:url("canap_bas_droit.png"); opacity: 50%;}
+/*Placement brut*/
+#canap:checked ~#zonecanap11:checked ~div #case11{background:url("canap_haut_gauche.png");}
+#canap:checked ~#zonecanap11:checked ~div div label[id$="11"]{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div #case12{background:url("canap_haut_droit.png");}
+#canap:checked ~#zonecanap11:checked ~div div label[id$="12"]{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div #case16{background:url("canap_bas_droit.png");}
+#canap:checked ~#zonecanap11:checked ~div div label[id$="16"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#canap:checked ~#zonecanap11:checked ~div div #lbzonebuffet07{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonebuffet03{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonetv10{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonetable05{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonetable06{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonetable09{display: none !important;}
+#canap:checked ~#zonecanap11:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#canap:checked ~#zonecanap11:checked ~div #lbbackzonecanap11{display: initial;}
+
+/*Passage au nouvel element à placer*/
+#canap:checked ~input[id^="zonecanap"]:checked ~div div label[id^="lbzonecanap"]{display: none;}
+#canap:checked ~input[id^="zonecanap"]:checked ~div div label[id^="lbzonetv"]{display: initial;}
+#canap:checked ~input[id^="zonecanap"]:checked ~#lbcanap{display: none;}
+#canap:checked ~input[id^="zonecanap"]:checked ~#lbtv{display: initial;}
+
+/*Placement tv ligne 1*/
+#tv:checked ~div label[id*="canap"]{display: none !important;}
+#tv:checked ~div #lbbacktv{display: initial;}
+/*Previsualisation*/
+#tv:checked ~#zonetv01:hover ~div #case1{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv01:hover ~div #case2{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv01:checked ~div #case1{background:url("tvg.png");}
+#tv:checked ~#zonetv01:checked ~div div label[id$="01"]{display: none !important;}
+#tv:checked ~#zonetv01:checked ~div #case2{background:url("tvd.png");}
+#tv:checked ~#zonetv01:checked ~div div label[id$="02"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+/*Bouton de retour*/
+#tv:checked ~#zonetv01:checked ~div #lbbackzonetv01{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv02:hover ~div #case2{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv02:hover ~div #case3{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv02:checked ~div #case2{background:url("tvg.png");}
+#tv:checked ~#zonetv02:checked ~div div label[id$="02"]{display: none !important;}
+#tv:checked ~#zonetv02:checked ~div #case3{background:url("tvd.png");}
+#tv:checked ~#zonetv02:checked ~div div label[id$="03"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv02:checked ~div div #lbzonetable01{display: none !important;}
+#tv:checked ~#zonetv02:checked ~div div #lbzonebuffet01{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv02:checked ~div #lbbackzonetv02{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv03:hover ~div #case3{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv03:hover ~div #case4{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv03:checked ~div #case3{background:url("tvg.png");}
+#tv:checked ~#zonetv03:checked ~div div label[id$="03"]{display: none !important;}
+#tv:checked ~#zonetv03:checked ~div #case4{background:url("tvd.png");}
+#tv:checked ~#zonetv03:checked ~div div label[id$="04"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv03:checked ~div div #lbzonebuffet02{display: none !important;}
+#tv:checked ~#zonetv03:checked ~div div #lbzonetable01{display: none !important;}
+#tv:checked ~#zonetv03:checked ~div div #lbzonetable02{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv03:checked ~div #lbbackzonetv03{display: initial;}
+
+
+/*Placement tv ligne 2*/
+/*Previsualisation*/
+#tv:checked ~#zonetv05:hover ~div #case5{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv05:hover ~div #case6{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv05:checked ~div #case5{background:url("tvg.png");}
+#tv:checked ~#zonetv05:checked ~div div label[id$="05"]{display: none !important;}
+#tv:checked ~#zonetv05:checked ~div #case6{background:url("tvd.png");}
+#tv:checked ~#zonetv05:checked ~div div label[id$="06"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv05:checked ~div div #lbzonetable01{display: none !important;}
+#tv:checked ~#zonetv05:checked ~div div #lbzonetable02{display: none !important;}
+#tv:checked ~#zonetv05:checked ~div div #lbzonebuffet01{display: none !important;}
+#tv:checked ~#zonetv05:checked ~div div #lbzonebuffet02{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv05:checked ~div #lbbackzonetv05{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv06:hover ~div #case6{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv06:hover ~div #case7{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv06:checked ~div #case6{background:url("tvg.png");}
+#tv:checked ~#zonetv06:checked ~div div label[id$="06"]{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div #case7{background:url("tvd.png");}
+#tv:checked ~#zonetv06:checked ~div div label[id$="07"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv06:checked ~div div #lbzonebuffet02{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div div #lbzonebuffet03{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div div #lbzonebuffet05{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div div #lbzonetable01{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div div #lbzonetable02{display: none !important;}
+#tv:checked ~#zonetv06:checked ~div div #lbzonetable03{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv06:checked ~div #lbbackzonetv06{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv07:hover ~div #case7{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv07:hover ~div #case8{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv07:checked ~div #case7{background:url("tvg.png");}
+#tv:checked ~#zonetv07:checked ~div div label[id$="07"]{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div #case8{background:url("tvd.png");}
+#tv:checked ~#zonetv07:checked ~div div label[id$="08"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv07:checked ~div div #lbzonetable01{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div div #lbzonetable02{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div div #lbzonetable03{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div div #lbzonetable04{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div div #lbzonebuffet03{display: none !important;}
+#tv:checked ~#zonetv07:checked ~div div #lbzonebuffet06{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv07:checked ~div #lbbackzonetv07{display: initial;}
+
+/*Placement tv ligne 3*/
+/*Previsualisation*/
+#tv:checked ~#zonetv09:hover ~div #case9{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv09:hover ~div #case10{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv09:checked ~div #case9{background:url("tvg.png");}
+#tv:checked ~#zonetv09:checked ~div div label[id$="09"]{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div #case10{background:url("tvd.png");}
+#tv:checked ~#zonetv09:checked ~div div label[id$="10"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv09:checked ~div div #lbzonebuffet01{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div div #lbzonebuffet02{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div div #lbzonebuffet05{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div div #lbzonebuffet06{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div div #lbzonetable05{display: none !important;}
+#tv:checked ~#zonetv09:checked ~div div #lbzonetable06{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv09:checked ~div #lbbackzonetv09{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv10:hover ~div #case10{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv10:hover ~div #case11{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv10:checked ~div #case10{background:url("tvg.png");}
+#tv:checked ~#zonetv10:checked ~div div label[id$="10"]{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div #case11{background:url("tvd.png");}
+#tv:checked ~#zonetv10:checked ~div div label[id$="11"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv10:checked ~div div #lbzonetable05{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonetable06{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonetable09{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonebuffet03{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonebuffet02{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonebuffet06{display: none !important;}
+#tv:checked ~#zonetv10:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv10:checked ~div #lbbackzonetv10{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv11:hover ~div #case11{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv11:hover ~div #case12{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv11:checked ~div #case11{background:url("tvg.png");}
+#tv:checked ~#zonetv11:checked ~div div label[id$="11"]{display: none !important;}
+#tv:checked ~#zonetv11:checked ~div #case12{background:url("tvd.png");}
+#tv:checked ~#zonetv11:checked ~div div label[id$="12"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv11:checked ~div div #lbzonetable05{display: none !important;}
+#tv:checked ~#zonetv11:checked ~div div #lbzonetable06{display: none !important;}
+#tv:checked ~#zonetv11:checked ~div div #lbzonetable09{display: none !important;}
+#tv:checked ~#zonetv11:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv11:checked ~div #lbbackzonetv11{display: initial;}
+
+/*Placement tv ligne 4*/
+/*Previsualisation*/
+#tv:checked ~#zonetv13:hover ~div #case13{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv13:hover ~div #case14{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv13:checked ~div #case13{background:url("tvg.png");}
+#tv:checked ~#zonetv13:checked ~div div label[id$="13"]{display: none !important;}
+#tv:checked ~#zonetv13:checked ~div #case14{background:url("tvd.png");}
+#tv:checked ~#zonetv13:checked ~div div label[id$="14"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv13:checked ~div div #lbzonetable09{display: none !important;}
+#tv:checked ~#zonetv13:checked ~div div #lbzonetable10{display: none !important;}
+#tv:checked ~#zonetv13:checked ~div div #lbzonebuffet05{display: none !important;}
+#tv:checked ~#zonetv13:checked ~div div #lbzonetable06{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv13:checked ~div #lbbackzonetv13{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv14:hover ~div #case14{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv14:hover ~div #case15{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv14:checked ~div #case14{background:url("tvg.png");}
+#tv:checked ~#zonetv14:checked ~div div label[id$="14"]{display: none !important;}
+#tv:checked ~#zonetv14:checked ~div #case15{background:url("tvd.png");}
+#tv:checked ~#zonetv14:checked ~div div label[id$="15"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv14:checked ~div div #lbzonetable09{display: none !important;}
+#tv:checked ~#zonetv14:checked ~div div #lbzonetable10{display: none !important;}
+#tv:checked ~#zonetv14:checked ~div div #lbzonebuffet06{display: none !important;}
+#tv:checked ~#zonetv14:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv14:checked ~div #lbbackzonetv14{display: initial;}
+
+/*Previsualisation*/
+#tv:checked ~#zonetv15:hover ~div #case15{background:url("tvg.png"); opacity: 50%;}
+#tv:checked ~#zonetv15:hover ~div #case16{background:url("tvd.png"); opacity: 50%;}
+/*Placement brut*/
+#tv:checked ~#zonetv15:checked ~div #case15{background:url("tvg.png");}
+#tv:checked ~#zonetv15:checked ~div div label[id$="15"]{display: none !important;}
+#tv:checked ~#zonetv15:checked ~div #case16{background:url("tvd.png");}
+#tv:checked ~#zonetv15:checked ~div div label[id$="16"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#tv:checked ~#zonetv15:checked ~div div #lbzonebuffet06{display: none !important;}
+#tv:checked ~#zonetv15:checked ~div div #lbzonebuffet07{display: none !important;}
+#tv:checked ~#zonetv15:checked ~div div #lbzonetable09{display: none !important;}
+#tv:checked ~#zonetv15:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#tv:checked ~#zonetv15:checked ~div #lbbackzonetv15{display: initial;}
+
+/*Passage nouvel element*/
+#tv:checked ~input[id^="zonetv"]:checked ~div div label[id^="lbzonetv"]{display: none;}
+#tv:checked ~input[id^="zonetv"]:checked ~div div label[id^="lbzonebocale"]{display: initial;}
+#tv:checked ~input[id^="zonetv"]:checked ~#lbtv{display: none;}
+#tv:checked ~input[id^="zonetv"]:checked ~#lbbocale{display: initial;}
+
+/*Placement bocale ligne 1*/
+#bocale:checked ~div label[id*="tv"]{display: none !important;}
+#bocale:checked ~div #lbbackbocale{display: initial;}
+/*Previsualisation*/
+#bocale:checked ~#zonebocale01:hover ~div #case1{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale01:checked ~div #case1{background:url("bocale.png");}
+#bocale:checked ~#zonebocale01:checked ~div div label[id$="01"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale01:checked ~div #lbbackzonebocale01{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale02:hover ~div #case2{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale02:checked ~div #case2{background:url("bocale.png");}
+#bocale:checked ~#zonebocale02:checked ~div div label[id$="02"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale02:checked ~div div #lbzonebuffet01{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale02:checked ~div #lbbackzonebocale02{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale03:hover ~div #case3{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale03:checked ~div #case3{background:url("bocale.png");}
+#bocale:checked ~#zonebocale03:checked ~div div label[id$="03"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale03:checked ~div div #lbzonetable01{display: none !important;}
+#bocale:checked ~#zonebocale03:checked ~div div #lbzonetable02{display: none !important;}
+#bocale:checked ~#zonebocale03:checked ~div div #lbzonebuffet02{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale03:checked ~div #lbbackzonebocale03{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale04:hover ~div #case4{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale04:checked ~div #case4{background:url("bocale.png");}
+#bocale:checked ~#zonebocale04:checked ~div div label[id$="04"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale04:checked ~div div #lbzonetable02{display: none !important;}
+#bocale:checked ~#zonebocale04:checked ~div div #lbzonebuffet03{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale04:checked ~div #lbbackzonebocale04{display: initial;}
+
+/*Placement bocale ligne 2*/
+/*Previsualisation*/
+#bocale:checked ~#zonebocale05:hover ~div #case5{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale05:checked ~div #case5{background:url("bocale.png");}
+#bocale:checked ~#zonebocale05:checked ~div div label[id$="05"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale05:checked ~div div #lbzonebuffet01{display: none !important;}
+#bocale:checked ~#zonebocale05:checked ~div div #lbzonetable01{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale05:checked ~div #lbbackzonebocale05{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale06:hover ~div #case6{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale06:checked ~div #case6{background:url("bocale.png");}
+#bocale:checked ~#zonebocale06:checked ~div div label[id$="06"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale06:checked ~div div #lbzonetable01{display: none !important;}
+#bocale:checked ~#zonebocale06:checked ~div div #lbzonetable02{display: none !important;}
+#bocale:checked ~#zonebocale06:checked ~div div #lbzonetable05{display: none !important;}
+#bocale:checked ~#zonebocale06:checked ~div div #lbzonebuffet02{display: none !important;}
+#bocale:checked ~#zonebocale06:checked ~div div #lbzonebuffet05{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale06:checked ~div #lbbackzonebocale06{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale07:hover ~div #case7{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale07:checked ~div #case7{background:url("bocale.png");}
+#bocale:checked ~#zonebocale07:checked ~div div label[id$="07"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale07:checked ~div div #lbzonebuffet03{display: none !important;}
+#bocale:checked ~#zonebocale07:checked ~div div #lbzonetable01{display: none !important;}
+#bocale:checked ~#zonebocale07:checked ~div div #lbzonetable02{display: none !important;}
+#bocale:checked ~#zonebocale07:checked ~div div #lbzonetable05{display: none !important;}
+#bocale:checked ~#zonebocale07:checked ~div div #lbzonetable06{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale07:checked ~div #lbbackzonebocale07{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale08:hover ~div #case8{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale08:checked ~div #case8{background:url("bocale.png");}
+#bocale:checked ~#zonebocale08:checked ~div div label[id$="08"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale08:checked ~div div #lbzonetable02{display: none !important;}
+#bocale:checked ~#zonebocale08:checked ~div div #lbzonetable06{display: none !important;}
+#bocale:checked ~#zonebocale08:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale08:checked ~div #lbbackzonebocale08{display: initial;}
+
+/*Placement bocale ligne 3*/
+/*Previsualisation*/
+#bocale:checked ~#zonebocale09:hover ~div #case9{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale09:checked ~div #case9{background:url("bocale.png");}
+#bocale:checked ~#zonebocale09:checked ~div div label[id$="09"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale09:checked ~div div #lbzonebuffet01{display: none !important;}
+#bocale:checked ~#zonebocale09:checked ~div div #lbzonebuffet05{display: none !important;}
+#bocale:checked ~#zonebocale09:checked ~div div #lbzonetable05{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale09:checked ~div #lbbackzonebocale09{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale10:hover ~div #case10{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale10:checked ~div #case10{background:url("bocale.png");}
+#bocale:checked ~#zonebocale10:checked ~div div label[id$="10"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale10:checked ~div div #lbzonetable05{display: none !important;}
+#bocale:checked ~#zonebocale10:checked ~div div #lbzonetable06{display: none !important;}
+#bocale:checked ~#zonebocale10:checked ~div div #lbzonetable09{display: none !important;}
+#bocale:checked ~#zonebocale10:checked ~div div #lbzonebuffet06{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale10:checked ~div #lbbackzonebocale10{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale11:hover ~div #case11{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale11:checked ~div #case11{background:url("bocale.png");}
+#bocale:checked ~#zonebocale11:checked ~div div label[id$="11"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale11:checked ~div div #lbzonebuffet07{display: none !important;}
+#bocale:checked ~#zonebocale11:checked ~div div #lbzonetable05{display: none !important;}
+#bocale:checked ~#zonebocale11:checked ~div div #lbzonetable06{display: none !important;}
+#bocale:checked ~#zonebocale11:checked ~div div #lbzonetable09{display: none !important;}
+#bocale:checked ~#zonebocale11:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale11:checked ~div #lbbackzonebocale11{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale12:hover ~div #case12{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale12:checked ~div #case12{background:url("bocale.png");}
+#bocale:checked ~#zonebocale12:checked ~div div label[id$="12"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale12:checked ~div div #lbzonetable06{display: none !important;}
+#bocale:checked ~#zonebocale12:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale12:checked ~div #lbbackzonebocale12{display: initial;}
+
+/*Placement bocale ligne 4*/
+/*Previsualisation*/
+#bocale:checked ~#zonebocale13:hover ~div #case13{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale13:checked ~div #case13{background:url("bocale.png");}
+#bocale:checked ~#zonebocale13:checked ~div div label[id$="13"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale13:checked ~div div #lbzonetable09{display: none !important;}
+#bocale:checked ~#zonebocale13:checked ~div div #lbzonebuffet05{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale13:checked ~div #lbbackzonebocale13{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale14:hover ~div #case14{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale14:checked ~div #case14{background:url("bocale.png");}
+#bocale:checked ~#zonebocale14:checked ~div div label[id$="14"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale14:checked ~div div #lbzonebuffet06{display: none !important;}
+#bocale:checked ~#zonebocale14:checked ~div div #lbzonetable09{display: none !important;}
+#bocale:checked ~#zonebocale14:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale14:checked ~div #lbbackzonebocale14{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale15:hover ~div #case15{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale15:checked ~div #case15{background:url("bocale.png");}
+#bocale:checked ~#zonebocale15:checked ~div div label[id$="15"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale15:checked ~div div #lbzonetable09{display: none !important;}
+#bocale:checked ~#zonebocale15:checked ~div div #lbzonetable10{display: none !important;}
+#bocale:checked ~#zonebocale15:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale15:checked ~div #lbbackzonebocale15{display: initial;}
+
+/*Previsualisation*/
+#bocale:checked ~#zonebocale16:hover ~div #case16{background:url("bocale.png"); opacity: 50%;}
+/*Placement brut*/
+#bocale:checked ~#zonebocale16:checked ~div #case16{background:url("bocale.png");}
+#bocale:checked ~#zonebocale16:checked ~div div label[id$="16"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#bocale:checked ~#zonebocale16:checked ~div div #lbzonetable10{display: none !important;}
+/*Bouton de retour*/
+#bocale:checked ~#zonebocale16:checked ~div #lbbackzonebocale16{display: initial;}
+
+/*Passage element suivant*/
+#bocale:checked ~input[id^="zonebocale"]:checked ~div div label[id^="lbzonebocale"]{display: none;}
+#bocale:checked ~input[id^="zonebocale"]:checked ~div div label[id^="lbzonetable"]{display: initial;}
+#bocale:checked ~input[id^="zonebocale"]:checked ~#lbbocale{display: none;}
+#bocale:checked ~input[id^="zonebocale"]:checked ~#lbtable{display: initial;}
+
+/*Placement table ligne 1*/
+#table:checked ~div label[id*="bocale"]{display: none !important;}
+#table:checked ~div #lbbacktable{display: initial;}
+/*Previsualisation*/
+#table:checked ~#zonetable01:hover ~div #case1{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable01:hover ~div #case2{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable01:hover ~div #case3{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable01:hover ~div #case5{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable01:hover ~div #case6{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable01:hover ~div #case7{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable01:checked ~div #case1{background:url("table_h_g.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="01"]{display: none !important;}
+#table:checked ~#zonetable01:checked ~div #case2{background:url("table_h_m.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="02"]{display: none !important;}
+#table:checked ~#zonetable01:checked ~div #case3{background:url("table_h_d.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="03"]{display: none !important;}
+#table:checked ~#zonetable01:checked ~div #case5{background:url("table_b_g.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="05"]{display: none !important;}
+#table:checked ~#zonetable01:checked ~div #case6{background:url("table_b_m.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="06"]{display: none !important;}
+#table:checked ~#zonetable01:checked ~div #case7{background:url("table_b_d.png");}
+#table:checked ~#zonetable01:checked ~div div label[id$="07"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+/*Bouton de retour*/
+#table:checked ~#zonetable01:checked ~div #lbbackzonetable01{display: initial;}
+
+/*Previsualisation*/
+#table:checked ~#zonetable02:hover ~div #case2{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable02:hover ~div #case3{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable02:hover ~div #case4{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable02:hover ~div #case6{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable02:hover ~div #case7{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable02:hover ~div #case8{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable02:checked ~div #case2{background:url("table_h_g.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="02"]{display: none !important;}
+#table:checked ~#zonetable02:checked ~div #case3{background:url("table_h_m.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="03"]{display: none !important;}
+#table:checked ~#zonetable02:checked ~div #case4{background:url("table_h_d.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="04"]{display: none !important;}
+#table:checked ~#zonetable02:checked ~div #case6{background:url("table_b_g.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="06"]{display: none !important;}
+#table:checked ~#zonetable02:checked ~div #case7{background:url("table_b_m.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="07"]{display: none !important;}
+#table:checked ~#zonetable02:checked ~div #case8{background:url("table_b_d.png");}
+#table:checked ~#zonetable02:checked ~div div label[id$="08"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#table:checked ~#zonetable02:checked ~div div #lbzonebuffet01{display: none !important;}
+#table:checked ~#zonetable02:checked ~div div #lbzonebuffet02{display: none !important;}
+/*Bouton de retour*/
+#table:checked ~#zonetable02:checked ~div #lbbackzonetable02{display: initial;}
+
+/*Placement tv ligne 2*/
+/*Previsualisation*/
+#table:checked ~#zonetable05:hover ~div #case5{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable05:hover ~div #case6{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable05:hover ~div #case7{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable05:hover ~div #case9{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable05:hover ~div #case10{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable05:hover ~div #case11{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable05:checked ~div #case5{background:url("table_h_g.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="05"]{display: none !important;}
+#table:checked ~#zonetable05:checked ~div #case6{background:url("table_h_m.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="06"]{display: none !important;}
+#table:checked ~#zonetable05:checked ~div #case7{background:url("table_h_d.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="07"]{display: none !important;}
+#table:checked ~#zonetable05:checked ~div #case9{background:url("table_b_g.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="09"]{display: none !important;}
+#table:checked ~#zonetable05:checked ~div #case10{background:url("table_b_m.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="10"]{display: none !important;}
+#table:checked ~#zonetable05:checked ~div #case11{background:url("table_b_d.png");}
+#table:checked ~#zonetable05:checked ~div div label[id$="11"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#table:checked ~#zonetable05:checked ~div div #lbzonebuffet01{display: none !important;}
+#table:checked ~#zonetable05:checked ~div div #lbzonebuffet02{display: none !important;}
+#table:checked ~#zonetable05:checked ~div div #lbzonebuffet03{display: none !important;}
+/*Bouton de retour*/
+#table:checked ~#zonetable05:checked ~div #lbbackzonetable05{display: initial;}
+
+/*Previsualisation*/
+#table:checked ~#zonetable06:hover ~div #case6{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable06:hover ~div #case7{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable06:hover ~div #case8{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable06:hover ~div #case10{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable06:hover ~div #case11{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable06:hover ~div #case12{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable06:checked ~div #case6{background:url("table_h_g.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="06"]{display: none !important;}
+#table:checked ~#zonetable06:checked ~div #case7{background:url("table_h_m.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="07"]{display: none !important;}
+#table:checked ~#zonetable06:checked ~div #case8{background:url("table_h_d.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="08"]{display: none !important;}
+#table:checked ~#zonetable06:checked ~div #case10{background:url("table_b_g.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="10"]{display: none !important;}
+#table:checked ~#zonetable06:checked ~div #case11{background:url("table_b_m.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="11"]{display: none !important;}
+#table:checked ~#zonetable06:checked ~div #case12{background:url("table_b_d.png");}
+#table:checked ~#zonetable06:checked ~div div label[id$="12"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#table:checked ~#zonetable06:checked ~div div #lbzonebuffet02{display: none !important;}
+#table:checked ~#zonetable06:checked ~div div #lbzonebuffet03{display: none !important;}
+#table:checked ~#zonetable06:checked ~div div #lbzonebuffet05{display: none !important;}
+/*Bouton de retour*/
+#table:checked ~#zonetable06:checked ~div #lbbackzonetable06{display: initial;}
+
+/*Placement tv ligne 3*/
+/*Previsualisation*/
+#table:checked ~#zonetable09:hover ~div #case9{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable09:hover ~div #case10{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable09:hover ~div #case11{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable09:hover ~div #case13{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable09:hover ~div #case14{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable09:hover ~div #case15{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable09:checked ~div #case9{background:url("table_h_g.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="09"]{display: none !important;}
+#table:checked ~#zonetable09:checked ~div #case10{background:url("table_h_m.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="10"]{display: none !important;}
+#table:checked ~#zonetable09:checked ~div #case11{background:url("table_h_d.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="07"]{display: none !important;}
+#table:checked ~#zonetable09:checked ~div #case13{background:url("table_b_g.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="13"]{display: none !important;}
+#table:checked ~#zonetable09:checked ~div #case14{background:url("table_b_m.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="14"]{display: none !important;}
+#table:checked ~#zonetable09:checked ~div #case15{background:url("table_b_d.png");}
+#table:checked ~#zonetable09:checked ~div div label[id$="15"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#table:checked ~#zonetable09:checked ~div div label[id^="lbzonebuffet"]{display: none !important;}
+/*Bouton de retour*/
+#table:checked ~#zonetable09:checked ~div #lbbackzonetable09{display: initial;}
+
+/*Previsualisation*/
+#table:checked ~#zonetable10:hover ~div #case10{background:url("table_h_g.png"); opacity: 50%;}
+#table:checked ~#zonetable10:hover ~div #case11{background:url("table_h_m.png"); opacity: 50%;}
+#table:checked ~#zonetable10:hover ~div #case12{background:url("table_h_d.png"); opacity: 50%;}
+#table:checked ~#zonetable10:hover ~div #case14{background:url("table_b_g.png"); opacity: 50%;}
+#table:checked ~#zonetable10:hover ~div #case15{background:url("table_b_m.png"); opacity: 50%;}
+#table:checked ~#zonetable10:hover ~div #case16{background:url("table_b_d.png"); opacity: 50%;}
+/*Placement brut*/
+#table:checked ~#zonetable10:checked ~div #case10{background:url("table_h_g.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="10"]{display: none !important;}
+#table:checked ~#zonetable10:checked ~div #case11{background:url("table_h_m.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="11"]{display: none !important;}
+#table:checked ~#zonetable10:checked ~div #case12{background:url("table_h_d.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="12"]{display: none !important;}
+#table:checked ~#zonetable10:checked ~div #case14{background:url("table_b_g.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="14"]{display: none !important;}
+#table:checked ~#zonetable10:checked ~div #case15{background:url("table_b_m.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="15"]{display: none !important;}
+#table:checked ~#zonetable10:checked ~div #case16{background:url("table_b_d.png");}
+#table:checked ~#zonetable10:checked ~div div label[id$="16"]{display: none !important;}
+/*Annulation des emplacements de superposition*/
+#table:checked ~#zonetable10:checked ~div div #lbzonebuffet02{display: none !important;}
+#table:checked ~#zonetable10:checked ~div div #lbzonebuffet03{display: none !important;}
+#table:checked ~#zonetable10:checked ~div div #lbzonebuffet06{display: none !important;}
+#table:checked ~#zonetable10:checked ~div div #lbzonebuffet07{display: none !important;}
+/*Bouton de retour*/
+#table:checked ~#zonetable10:checked ~div #lbbackzonetable10{display: initial;}
+
+/*Passage element suivant*/
+#table:checked ~input[id^="zonetable"]:checked ~div div label[id^="lbzonetable"]{display: none;}
+#table:checked ~input[id^="zonetable"]:checked ~div div label[id^="lbzonebuffet"]{display: initial;}
+#table:checked ~input[id^="zonetable"]:checked ~#lbtable{display: none;}
+#table:checked ~input[id^="zonetable"]:checked ~#lbbuffet{display: initial;}
+
+/*Placement buffet ligne 1*/
+#buffet:checked ~div label[id*="table"]{display: none !important;}
+#buffet:checked ~div #lbbackbuffet{display: initial;}
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet01:hover ~div #case1{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet01:hover ~div #case2{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet01:hover ~div #case5{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet01:hover ~div #case9{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet01:checked ~div #case1{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet01:checked ~div div label[id$="01"]{display: none !important;}
+#buffet:checked ~#zonebuffet01:checked ~div #case2{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet01:checked ~div div label[id$="02"]{display: none !important;}
+#buffet:checked ~#zonebuffet01:checked ~div #case5{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet01:checked ~div div label[id$="05"]{display: none !important;}
+#buffet:checked ~#zonebuffet01:checked ~div #case9{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet01:checked ~div div label[id$="09"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet02:checked ~div #lbbackzonebuffet01{display: initial;}
+
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet02:hover ~div #case2{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet02:hover ~div #case3{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet02:hover ~div #case6{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet02:hover ~div #case10{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet02:checked ~div #case2{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet02:checked ~div div label[id$="01"]{display: none !important;}
+#buffet:checked ~#zonebuffet02:checked ~div #case3{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet02:checked ~div div label[id$="02"]{display: none !important;}
+#buffet:checked ~#zonebuffet02:checked ~div #case6{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet02:checked ~div div label[id$="05"]{display: none !important;}
+#buffet:checked ~#zonebuffet02:checked ~div #case10{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet02:checked ~div div label[id$="09"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet02:checked ~div #lbbackzonebuffet02{display: initial;}
+
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet03:hover ~div #case3{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet03:hover ~div #case4{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet03:hover ~div #case7{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet03:hover ~div #case11{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet03:checked ~div #case3{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet03:checked ~div div label[id$="01"]{display: none !important;}
+#buffet:checked ~#zonebuffet03:checked ~div #case4{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet03:checked ~div div label[id$="02"]{display: none !important;}
+#buffet:checked ~#zonebuffet03:checked ~div #case7{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet03:checked ~div div label[id$="05"]{display: none !important;}
+#buffet:checked ~#zonebuffet03:checked ~div #case11{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet03:checked ~div div label[id$="09"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet03:checked ~div #lbbackzonebuffet03{display: initial;}
+
+/*Placement buffet ligne 2*/
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet05:hover ~div #case5{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet05:hover ~div #case6{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet05:hover ~div #case9{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet05:hover ~div #case13{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet05:checked ~div #case5{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet05:checked ~div div label[id$="05"]{display: none !important;}
+#buffet:checked ~#zonebuffet05:checked ~div #case6{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet05:checked ~div div label[id$="06"]{display: none !important;}
+#buffet:checked ~#zonebuffet05:checked ~div #case9{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet05:checked ~div div label[id$="09"]{display: none !important;}
+#buffet:checked ~#zonebuffet05:checked ~div #case13{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet05:checked ~div div label[id$="13"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet05:checked ~div #lbbackzonebuffet05{display: initial;}
+
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet06:hover ~div #case6{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet06:hover ~div #case7{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet06:hover ~div #case10{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet06:hover ~div #case14{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet06:checked ~div #case6{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet06:checked ~div div label[id$="06"]{display: none !important;}
+#buffet:checked ~#zonebuffet06:checked ~div #case7{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet06:checked ~div div label[id$="07"]{display: none !important;}
+#buffet:checked ~#zonebuffet06:checked ~div #case10{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet06:checked ~div div label[id$="10"]{display: none !important;}
+#buffet:checked ~#zonebuffet06:checked ~div #case14{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet06:checked ~div div label[id$="14"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet06:checked ~div #lbbackzonebuffet06{display: initial;}
+
+/*Previsualisation*/
+#buffet:checked ~#zonebuffet07:hover ~div #case7{background:url("buffet_hg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet07:hover ~div #case8{background:url("buffet_hd.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet07:hover ~div #case11{background:url("buffet_mg.png"); opacity: 50%;}
+#buffet:checked ~#zonebuffet07:hover ~div #case15{background:url("buffet_bg.png"); opacity: 50%;}
+/*Placement brut*/
+#buffet:checked ~#zonebuffet07:checked ~div #case7{background:url("buffet_hg.png");}
+#buffet:checked ~#zonebuffet07:checked ~div div label[id$="07"]{display: none !important;}
+#buffet:checked ~#zonebuffet07:checked ~div #case8{background:url("buffet_hd.png");}
+#buffet:checked ~#zonebuffet07:checked ~div div label[id$="08"]{display: none !important;}
+#buffet:checked ~#zonebuffet07:checked ~div #case11{background:url("buffet_mg.png");}
+#buffet:checked ~#zonebuffet07:checked ~div div label[id$="11"]{display: none !important;}
+#buffet:checked ~#zonebuffet07:checked ~div #case15{background:url("buffet_bg.png");}
+#buffet:checked ~#zonebuffet07:checked ~div div label[id$="15"]{display: none !important;}
+/*Bouton de retour*/
+#buffet:checked ~#zonebuffet07:checked ~div #lbbackzonebuffet07{display: initial;}
+
+#canap:checked ~input[id^="zonecanap"]:checked ~#tv:checked ~input[id^="zonetv"]:checked ~#bocale:checked ~input[id^="zonebocale"]:checked ~#table:checked ~input[id^="zonetable"]:checked ~#buffet:checked ~input[id^="zonebuffet"]:checked ~#endgame{
+    display: initial;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 20px;
+    color:green;
+    font-weight: bold;
+    font-family: 'Agency FB'; 
+    background-color: white;
+    padding-top: 5%;
+
+}
